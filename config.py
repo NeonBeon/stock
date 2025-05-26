@@ -2,9 +2,11 @@
 Configuration settings for the Garden Stock Notifier
 """
 
+import os
+
 # API Endpoints
 SCRAPER_API_URL = "https://web.scraper.workers.dev/?url=https%3A%2F%2Fvulcanvalues.com%2Fgrow-a-garden%2Fstock&selector=span&scrape=text&pretty=true"
-DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1376163026977161319/6oJcuvrgtqRcIz655hx7JvFHGt-3-FdH75H853yCh9ayk87zuRiFP73SCfJYPKI4t14B"
+DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")  # Read from environment variable
 
 # Item Categories
 SEEDS = [
